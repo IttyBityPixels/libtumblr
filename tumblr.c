@@ -1,12 +1,15 @@
 #include <stdio.h>
-#include "curl.h"
+#include <curl/curl.h>
 
 int init_curl()
 {
-	curl_global_init(CURL_GLOBAL_ALL);
+	if (curl_global_init(CURL_GLOBAL_ALL) != 0)
+		return -1;
+
+	return 0;
 }
 
-int cleanup_curl()
+void cleanup_curl()
 {
 	curl_global_cleanup();
 }
