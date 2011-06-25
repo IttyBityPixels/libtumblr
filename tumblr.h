@@ -2,6 +2,7 @@
 #define TUMBLR.H
 
 int init_curl();
-int cleanup_curl();
+void cleanup_curl();
+int text();
 
 #endif

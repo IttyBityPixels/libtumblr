@@ -13,3 +13,7 @@ void cleanup_curl()
 {
 	curl_global_cleanup();
 }
+
+int text() {
+
+}
