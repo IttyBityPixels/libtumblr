@@ -14,6 +14,15 @@ void cleanup_curl()
 	curl_global_cleanup();
 }
 
-int text() {
+int text(char *type, char *email, char *password, char *title, char *body, int id)
+{
+	CURL *curl;
+	CURLcode res;
 
+	curl = curl_easy_init();
+
+	if (curl)
+	{
+		//curl_easy_setopt(curl, CURLOPT_URL, 
+	}
 }
